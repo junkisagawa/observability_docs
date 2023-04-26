@@ -9,20 +9,22 @@
       
       
       
+        <link rel="prev" href="./">
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
     
     
       
-        <title>Observability関連Note</title>
+        <title>Prometheusについて - Observability関連Note</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -38,7 +40,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prometheus" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -76,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Observability関連Note" class="md-header__button md-logo" aria-label="Observability関連Note" data-md-component="logo">
+    <a href=".." title="Observability関連Note" class="md-header__button md-logo" aria-label="Observability関連Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -95,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Prometheusについて
             
           </span>
         </div>
@@ -184,7 +191,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href=".." class="md-tabs__link">
       はじめに
     </a>
   </li>
@@ -199,7 +206,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/prome-turbo/" class="md-tabs__link">
+      <a href="../prome-turbo/" class="md-tabs__link">
         turbonomic
       </a>
     </li>
@@ -215,7 +222,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/instana.md" class="md-tabs__link">
+      <a href="../instana.md" class="md-tabs__link">
         Instana
       </a>
     </li>
@@ -225,13 +232,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="/prometheus/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         その他メモ
       </a>
     </li>
@@ -259,7 +268,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Observability関連Note" class="md-nav__button md-logo" aria-label="Observability関連Note" data-md-component="logo">
+    <a href=".." title="Observability関連Note" class="md-nav__button md-logo" aria-label="Observability関連Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -278,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         はじめに
       </a>
     </li>
@@ -322,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prome-turbo/" class="md-nav__link">
+      <a href="../prome-turbo/" class="md-nav__link">
         prome-turbo
       </a>
     </li>
@@ -336,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/prometheus/" class="md-nav__link">
+      <a href="./" class="md-nav__link">
         prometheus
       </a>
     </li>
@@ -387,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/instana.md" class="md-nav__link">
+      <a href="../instana.md" class="md-nav__link">
         Instana概要
       </a>
     </li>
@@ -407,16 +416,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        
-      
-      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
@@ -425,7 +434,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           その他メモ
@@ -436,11 +445,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/prometheus/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Prometheusについて
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Prometheusについて
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-kubernetes" class="md-nav__link">
+    デプロイ手順 on Kubernetes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -469,6 +519,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#on-kubernetes" class="md-nav__link">
+    デプロイ手順 on Kubernetes
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -480,8 +547,56 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<h1 id="prometheus">Prometheusの設定</h1>
+<p>Prometheusは、高スケーラブルなオープンソースのモニタリングフレームワークです。Kubernetesコンテナオーケストレーションプラットフォームのためのアウトオブボックスの監視機能を提供します。また、観測可能な領域では、メトリクスとアラートを支援するため、大きな人気を集めています。</p>
+<p><strong>重要なポイント5つ</strong></p>
+<ol>
+<li>メトリックの収集： Prometheusでは、Pullモデルを使って、HTTPでメトリクスを取得します。Prometheusがメトリクスをスクレイピングできないユースケースには、Pushgatewayを使ってPrometheusにメトリクスをプッシュするオプションがあります。例えば、短時間のkubernetesジョブやCronjobからカスタムメトリクスを収集するような例です。</li>
+<li>メトリクスのエンドポイント Prometheusを使って監視したいシステムは、/metricsエンドポイントにメトリクスを公開する必要があります。Prometheusは、このエンドポイントを使用して、定期的にメトリクスを取得します。</li>
+<li>PromQL： PrometheusにはPromQLという非常に柔軟なクエリ言語が付属しており、Prometheusのダッシュボードでメトリクスを照会するために使用することができます。また、PromQLクエリは、Prometheus UIとGrafanaでメトリックスを可視化するために使用されます。</li>
+<li>Prometheus Exporters（プロメテウス・エクスポーター）： Exporters は、サードパーティアプリの既存のメトリクスを Prometheus のメトリクス形式に変換するライブラリです。多くの公式およびコミュニティのPrometheusエクスポーターが存在します。一例として、Prometheusノードエクスポーターがあります。これは、すべてのLinuxシステムレベルのメトリクスをPrometheusフォーマットで公開するものです。</li>
+<li>TSDB（時系列データベース）： Prometheusは、すべてのデータを効率的に保存するためにTSDBを使用します。デフォルトでは、すべてのデータはローカルに保存されます。しかし、単一障害点を避けるために、PrometheusのTSDBにリモートストレージを統合するオプションがあります。  </li>
+</ol>
+<p><strong>kubernetesにデプロイするコンポーネント</strong></p>
+<ol>
+<li><code>kubernetes-apiservers</code>: API serversからすべてのメトリックを取得する.</li>
+<li><code>kubernetes-nodes</code>: kubernetes Nodeのメトリックを取得する</li>
+<li><code>kubernetes-pods</code>: All the pod metrics get discovered if the pod metadata is annotated with <code>prometheus.io/scrape</code> and <code>prometheus.io/port</code> annotations.</li>
+<li><code>kubernetes-cadvisor</code>: cAdvisor メトリックを取得する.</li>
+<li><code>kubernetes-service-endpoints</code>: All the Service endpoints are scrapped if the service metadata is annotated with prometheus.io/scrape and prometheus.io/port annotations. It can be used for black-box monitoring.</li>
+</ol>
+<p><code>prometheus.rules</code> contains all the alert rules for sending alerts to the Alertmanager.</p>
+<h2 id="on-kubernetes">デプロイ手順 on Kubernetes</h2>
+<p>OpenShiftは標準装備ですが、Kubernetesの場合は別途デプロイする必要があります。</p>
+<ol>
+<li>ソースコード入手<ol>
+<li>https://github.com/coreos/kube-prometheus</li>
+<li>/manifest の中のprometheus関連のものだけ使う</li>
+<li>全部まとめてapplyするとAlertManagerやGrafanaも入るが、IKS無償枠だとスペックが足りないためPrometheusだけにする</li>
+</ol>
+</li>
+<li>Namespace作成。名前はMonitoringにする。
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>monitoring
+</code></pre></div></li>
+<li>ClusterRole, Configmap, Deploymentを修正してapplyしていく
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>config-map.yaml
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>clusterRole.yaml
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>kubectl<span class="w"> </span>create<span class="w">  </span>-f<span class="w"> </span>prometheus-deployment.yaml
+</code></pre></div></li>
+<li>PrometheusのダッシュボードにアクセスしたいのでNodePortを作る。</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kubectl<span class="w"> </span>port-forward<span class="w"> </span>prometheus-deployment<span class="w"> </span><span class="m">8080</span>:9090<span class="w"> </span>-n<span class="w"> </span>monitoring
+</code></pre></div>
+<p>ClusterIP : NodePortでアクセスしてみる。<a href="http://169.51.194.202:30000/graph">http://169.51.194.202:30000/graph</a></p>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -561,10 +676,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "/assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
       
     
   </body>
