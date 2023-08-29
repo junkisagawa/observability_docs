@@ -15,7 +15,7 @@
     
     
       
-        <title>Turbonomiｃ Reporting機能の追加 - Observability独習メモ</title>
+        <title>各種DBへアクセスしてみる - Observability独習メモ</title>
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#turbonomic-reporting" class="md-skip">
+        <a href="#db" class="md-skip">
           Skip to content
         </a>
       
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Turbonomiｃ Reporting機能の追加
+              各種DBへアクセスしてみる
             
           </span>
         </div>
@@ -368,15 +368,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#turbonomic-visualization-repository" class="md-nav__link">
-    Turbonomic Visualization Repository（ターボノミック・ビジュアライゼーション・レポジトリ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    レポート機能
+    準備
   </a>
   
 </li>
@@ -396,19 +389,16 @@
                   
 
 
-<h1 id="turbonomic-reporting">Turbonomiｃ Reporting機能の追加</h1>
-<h2 id="turbonomic-visualization-repository">Turbonomic Visualization Repository（ターボノミック・ビジュアライゼーション・レポジトリ</h2>
-<p>https://github.com/turbonomic/visualization/tree/main<br />
-Turbonomicで使用するダッシュボードの設定に関するインタラクティブなコミュニティリポジトリ。ダッシュボードの種類は、3つに分類されています：</p>
+<h1 id="db">各種DBへアクセスしてみる</h1>
+<p>VSCodeの拡張機能を導入して、ローカルで動いている各DBへ接続していきます。RDB, NoSQL（kvm/document）の3種類がどうなってるのか確認していきます。</p>
 <ol>
-<li>公式でサポートされているビルトインダッシュボード - これらは、デフォルトでTurbonomicインスタンスに含まれており、簡単にカスタマイズするための基本テンプレートとしてここで利用できます。  </li>
-<li>公式でサポートされている拡張ダッシュボード - これらは、オンデマンドでTurbonomicインスタンスにロードすることができます。  </li>
-<li>コミュニティサポート - Turbonomicの技術および顧客コミュニティのメンバーによって作成された、そのままの状態で提供されるものです。  </li>
+<li>MySQL  </li>
+<li>Redis  </li>
+<li>MongoDB  </li>
 </ol>
-<p>各ダッシュボードは、Turbonomicインスタンス上のGrafanaベースの実装で、クエリビルダーやビジュアルデザイナーを通じて設計され、ここでは簡単にインポート可能なJSONファイルとしてエクスポートされます。</p>
-<h2 id="_1">レポート機能</h2>
-<p>Turbonomic プラットフォームには、Embedded Reporting コンポーネントが含まれており、プラットフォームのインストール時に有効にするかどうかを選択することができます。Embedded Reporting は、アプリケーションリソース管理の傾向を把握し、レポートやダッシュボードを介して関係者と洞察を共有するために使用します。  </p>
-<p>Embedded Reporting は Turbonomic プラットフォームの一部として、独自のコンポーネントとして動作します。このアーキテクチャは、パフォーマンスを向上させ、ストレージ要件を削減します。Turbonomic Reporting は、管理環境の履歴を保存し、その履歴のスナップショットを標準のダッシュボードやレポートとして表示します。また、独自のダッシュボードやレポートを作成することで、気になる部分にフォーカスすることも可能です。</p>
+<h2 id="_1">準備</h2>
+<p>まずは拡張機能を入れます。色々なDBに接続できる有名なやつは、無料プランだと3つまでしかコネクションできないので使ってないです。VSCodeの左メニューからExtensionを選択して、検索ボックスに"mysql"を入力してください。目的のブツは一番上にあるので、Installをクリック。</p>
+<p>同じように、"Redis"、"mongoDB"でも検索してインストールしてください。</p>
 
 
 

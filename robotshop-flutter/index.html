@@ -15,7 +15,7 @@
     
     
       
-        <title>Turbonomiｃ Reporting機能の追加 - Observability独習メモ</title>
+        <title>Instana用 クライアントアプリ開発 - Observability独習メモ</title>
       
     
     
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#turbonomic-reporting" class="md-skip">
+        <a href="#instana" class="md-skip">
           Skip to content
         </a>
       
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Turbonomiｃ Reporting機能の追加
+              Instana用 クライアントアプリ開発
             
           </span>
         </div>
@@ -368,15 +368,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#turbonomic-visualization-repository" class="md-nav__link">
-    Turbonomic Visualization Repository（ターボノミック・ビジュアライゼーション・レポジトリ
+  <a href="#_1" class="md-nav__link">
+    画面一覧
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    レポート機能
+  <a href="#api" class="md-nav__link">
+    呼び出すAPI
   </a>
   
 </li>
@@ -396,19 +396,38 @@
                   
 
 
-<h1 id="turbonomic-reporting">Turbonomiｃ Reporting機能の追加</h1>
-<h2 id="turbonomic-visualization-repository">Turbonomic Visualization Repository（ターボノミック・ビジュアライゼーション・レポジトリ</h2>
-<p>https://github.com/turbonomic/visualization/tree/main<br />
-Turbonomicで使用するダッシュボードの設定に関するインタラクティブなコミュニティリポジトリ。ダッシュボードの種類は、3つに分類されています：</p>
-<ol>
-<li>公式でサポートされているビルトインダッシュボード - これらは、デフォルトでTurbonomicインスタンスに含まれており、簡単にカスタマイズするための基本テンプレートとしてここで利用できます。  </li>
-<li>公式でサポートされている拡張ダッシュボード - これらは、オンデマンドでTurbonomicインスタンスにロードすることができます。  </li>
-<li>コミュニティサポート - Turbonomicの技術および顧客コミュニティのメンバーによって作成された、そのままの状態で提供されるものです。  </li>
-</ol>
-<p>各ダッシュボードは、Turbonomicインスタンス上のGrafanaベースの実装で、クエリビルダーやビジュアルデザイナーを通じて設計され、ここでは簡単にインポート可能なJSONファイルとしてエクスポートされます。</p>
-<h2 id="_1">レポート機能</h2>
-<p>Turbonomic プラットフォームには、Embedded Reporting コンポーネントが含まれており、プラットフォームのインストール時に有効にするかどうかを選択することができます。Embedded Reporting は、アプリケーションリソース管理の傾向を把握し、レポートやダッシュボードを介して関係者と洞察を共有するために使用します。  </p>
-<p>Embedded Reporting は Turbonomic プラットフォームの一部として、独自のコンポーネントとして動作します。このアーキテクチャは、パフォーマンスを向上させ、ストレージ要件を削減します。Turbonomic Reporting は、管理環境の履歴を保存し、その履歴のスナップショットを標準のダッシュボードやレポートとして表示します。また、独自のダッシュボードやレポートを作成することで、気になる部分にフォーカスすることも可能です。</p>
+<h1 id="instana">Instana用 クライアントアプリ開発</h1>
+<p>Robotshopがダサすぎるのとモバイルアプリのコードが見つからないので、土日を使ってFlutterで開発していく。今の/webのフロントエンドはAngular1.6で去年サポート終わってる。</p>
+<blockquote>
+<p>AngularJS support has officially ended as of January 2022.
+InstanaAgentの設定は<a href="https://pub.dev/packages/instana_agent">ここ</a>
+Instanaセンサー（クライアント？）は<a href="https://github.com/instana/flutter-agent">ここ</a></p>
+</blockquote>
+<p>クロスプラットフォームはじめてだから楽しみ。ReactNativeと悩んだけど、学習コンテンツ多めだったのでFlutterにしました。Cordovaは候補に入らなかった。  </p>
+<h2 id="_1">画面一覧</h2>
+<ul>
+<li>ログイン</li>
+<li>商品リスト</li>
+<li>商品詳細</li>
+<li>買い物かご</li>
+<li>マイページ</li>
+<li>アーキテクチャ説明 ヘルプ</li>
+<li>支払い</li>
+<li>配送</li>
+</ul>
+<h2 id="api">呼び出すAPI</h2>
+<ul>
+<li>POST /login</li>
+<li>POST /user</li>
+<li>POST /register</li>
+<li>GET /products/:search_text</li>
+<li>GET /products/:category</li>
+<li>GET /product/:sku</li>
+<li>POST /review?userid&amp;rate&amp;message</li>
+<li>GET /review:sku</li>
+<li>POST /payment/pay orderid</li>
+<li>GET /orders:userid</li>
+</ul>
 
 
 
